@@ -5,13 +5,9 @@ import com.students.swe642surveys.util.InterestSource;
 import com.students.swe642surveys.util.RecommendLikelihood;
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
-import org.springframework.cglib.core.Local;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 
 @Entity
 @Table(name = "surveys")
