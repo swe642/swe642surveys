@@ -1,4 +1,4 @@
-package com.students.swe642surveys.service.serviceimpl;
+package com.students.swe642surveys.service.impl;
 
 import com.students.swe642surveys.entity.Surveys;
 import com.students.swe642surveys.repository.SurveyRepository;
@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.InputMismatchException;
 import java.util.List;
-import java.util.NoSuchElementException;
 
 @Service
 public class SurveysServiceImpl implements SurveysService {
