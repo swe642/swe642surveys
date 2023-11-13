@@ -7,6 +7,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -44,8 +45,8 @@ public class Surveys {
     private String email;
 
     @Column(name = "date_of_survey", nullable = false)
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss.SSSSSS")
-    private LocalDateTime dateOfSurvey;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    private LocalDate dateOfSurvey;
 
     @Column(name = "liked_students", nullable = false)
     private boolean likedStudents;
@@ -65,11 +66,11 @@ public class Surveys {
     @Column(name = "liked_sports", nullable = false)
     private boolean likedSports;
 
-    @Column(name = "interest_source", nullable = false)
+    @Column(name = "interest_source")
     @Enumerated(EnumType.STRING)
     private InterestSource interestSource;
 
-    @Column(name = "recommend_likelihood", nullable = false)
+    @Column(name = "recommend_likelihood")
     @Enumerated(EnumType.STRING)
     private RecommendLikelihood recommendLikelihood;
 

@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/survey")
+@RequestMapping("/surveys")
+@CrossOrigin
 public class SurveyController {
 
     @Autowired
