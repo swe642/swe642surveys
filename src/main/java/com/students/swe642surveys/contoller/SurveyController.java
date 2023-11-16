@@ -1,6 +1,7 @@
 package com.students.swe642surveys.contoller;
 
 import com.students.swe642surveys.entity.Surveys;
+import com.students.swe642surveys.exceptions.ResponseDto;
 import com.students.swe642surveys.service.SurveysService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -36,5 +37,11 @@ public class SurveyController {
     @GetMapping(params = "id")
     public ResponseEntity<Surveys> getSurvey(@RequestParam int id) {
         return new ResponseEntity<Surveys>(surveysService.getSurvey(id), HttpStatus.OK);
+    }
+
+    @DeleteMapping(params = "id")
+    public ResponseEntity<ResponseDto> deleteSurvey(@RequestParam int id) {
+        surveysService.deleteSurvey(id);
+         return new ResponseEntity<ResponseDto>(new ResponseDto("Survey Deleted Successfully!", HttpStatus.OK.value()), HttpStatus.OK);
     }
 }

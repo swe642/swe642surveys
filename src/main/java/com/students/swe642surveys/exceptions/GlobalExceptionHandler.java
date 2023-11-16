@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
-    public ResponseEntity<ErrorDto> handleGlobalException(Exception exception) {
+    public ResponseEntity<ResponseDto> handleGlobalException(Exception exception) {
         // Log the exception or perform any other necessary actions
-        ErrorDto response = new ErrorDto();
-        response.setErrorCode(HttpStatus.INTERNAL_SERVER_ERROR.value());
-        response.setErrorMessage(exception.getLocalizedMessage());
+        ResponseDto response = new ResponseDto();
+        response.setStatusCode(HttpStatus.INTERNAL_SERVER_ERROR.value());
+        response.setMessage(exception.getLocalizedMessage());
         return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 

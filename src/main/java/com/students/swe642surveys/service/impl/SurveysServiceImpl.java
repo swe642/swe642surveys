@@ -43,4 +43,10 @@ public class SurveysServiceImpl implements SurveysService {
         return surveyRepository.save(survey);
 
     }
+
+    @Override
+    public void deleteSurvey(int id) {
+        getSurvey(id);
+        surveyRepository.deleteById(id);
+    }
 }
