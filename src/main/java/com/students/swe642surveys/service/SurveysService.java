@@ -5,6 +5,11 @@ import org.springframework.http.HttpStatusCode;
 
 import java.util.List;
 
+/*
+ * @author Vamshi Gopari, Akhil Krishna Sai Takkella, Purna Chandra Pattipati, Vaishnavi Priya Chennu
+ * This is a service interface that has methods declared for crud operations.
+ * implementation for this methods in SurveysServiceImpl
+ * */
 public interface SurveysService {
 
     public Surveys saveSurvey(Surveys survey);

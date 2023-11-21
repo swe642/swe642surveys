@@ -10,6 +10,11 @@ import org.springframework.stereotype.Service;
 import java.util.InputMismatchException;
 import java.util.List;
 
+
+/*
+ * @author Vamshi Gopari, Akhil Krishna Sai Takkella, Purna Chandra Pattipati, Vaishnavi Priya Chennu
+ * This is a service class that has business logic for the crud operations.
+ * */
 @Service
 public class SurveysServiceImpl implements SurveysService {
 

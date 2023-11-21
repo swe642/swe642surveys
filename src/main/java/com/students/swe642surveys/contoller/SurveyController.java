@@ -5,12 +5,15 @@ import com.students.swe642surveys.exceptions.ResponseDto;
 import com.students.swe642surveys.service.SurveysService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/*
+ * @author Vamshi Gopari, Akhil Krishna Sai Takkella, Purna Chandra Pattipati, Vaishnavi Priya Chennu
+ * This controller has all the crud operations implemented.
+ * */
 @RestController
 @RequestMapping("/surveys")
 @CrossOrigin

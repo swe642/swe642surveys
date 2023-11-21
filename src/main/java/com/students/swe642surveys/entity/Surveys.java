@@ -10,6 +10,11 @@ import org.hibernate.annotations.CreationTimestamp;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+
+/*
+ * @author Vamshi Gopari, Akhil Krishna Sai Takkella, Purna Chandra Pattipati, Vaishnavi Priya Chennu
+ * This Entity class is used to map to a Database table
+ * */
 @Entity
 @Table(name = "surveys")
 @Data
